@@ -1,1 +1,10 @@
-
+/* Custom styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+header {
+    background-color: #4CAF50;
+}
+footer {
+    background-color: #4CAF50;
+}
