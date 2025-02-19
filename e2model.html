@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepField E2 Model - DeepField ML</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>DeepField ML</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="e2model.html">DeepField E2 Model</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>DeepField E2: A Lightweight Mixture-of-Experts</h2>
+            <p>DeepField E2 is a jersey digit recognition engine designed for efficiency and accuracy.</p>
+
+            <h3>Architecture</h3>
+            <p>E2 uses a knowledge distillation approach:</p>
+            <ul>
+                <li><strong>Teacher Model:</strong> ResNet-34 (provides "soft labels").</li>
+                <li><strong>Student Model:</strong> EfficientNet-B0 backbone with a modified classification layer.</li>
+            </ul>
+
+            <h3>Key Techniques</h3>
+            <ul>
+                <li><strong>Knowledge Distillation:</strong> Transfers knowledge from the teacher model to the student model, improving accuracy and reducing size.</li>
+                <li><strong>Compound Scaling:</strong> Balances depth, width, and resolution for optimal performance.</li>
+                <li><strong>Hybrid Loss Function:</strong> Combines cross-entropy and Kullback-Leibler (KL) divergence.</li>
+                <li><strong>Data Augmentation:</strong> Robust data augmentation techniques to improve generalization.</li>
+            </ul>
+
+            <h3>Performance</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Test Set</th>
+                        <th>Stress Set</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Accuracy</td>
+                        <td>94.6%</td>
+                        <td>89.0%</td>
+                    </tr>
+                    <tr>
+                        <td>Precision</td>
+                        <td>93.8%</td>
+                        <td>88.5%</td>
+                    </tr>
+                    <tr>
+                        <td>Recall</td>
+                        <td>94.2%</td>
+                        <td>88.7%</td>
+                    </tr>
+                    <tr>
+                        <td>F1 Score</td>
+                        <td>94.0%</td>
+                        <td>88.6%</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Resources</h3>
+            <ul>
+                <li><strong>GitHub Repository:</strong> <a href="https://github.com/deepfield-ml/E2Jersey">https://github.com/deepfield-ml/E2Jersey</a></li>
+                <li><strong>HuggingFace Model:</strong> <a href="https://huggingface.co/DeepFieldML/DeepField PlayerDigit Number Analysis Engine">https://huggingface.co/DeepFieldML/DeepField PlayerDigit Number Analysis Engine</a></li>
+                <li><strong>DOI:</strong> <a href="https://doi.org/10.5281/zenodo.14838463">https://doi.org/10.5281/zenodo.14838463</a></li>
+            </ul>
+
+            <h3>Future Work</h3>
+            <p>We plan to explore quantization and the integration of Vision Transformers (ViTs) to further improve the model.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 DeepField ML</p>
+        <p>Ziqian Huang and Will Chen</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
