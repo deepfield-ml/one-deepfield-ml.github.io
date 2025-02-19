@@ -1,63 +1,225 @@
+/* ================================================
+   General Styles
+   ================================================ */
 body {
-    font-family: sans-serif;
+    font-family: 'Poppins', sans-serif; /* A modern font choice */
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #f8f9fa; /* Very light gray */
+    color: #343a40; /* Dark gray */
+    line-height: 1.7;
 }
 
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ================================================
+   Header
+   ================================================ */
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 1em 0;
-    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 1.5em 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 1.75em;
+    font-weight: 700;
+    color: #007bff; /* Brand color */
+    text-decoration: none;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 1em;
+nav li {
+    margin-left: 2em;
 }
 
 nav a {
-    color: #fff;
+    color: #495057; /* Medium gray */
     text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
+nav a:hover {
+    color: #007bff;
+}
+
+/* Mobile Menu Button (Hidden by default) */
+.menu-toggle {
+    display: none;
+    font-size: 1.5em;
+    color: #495057;
+    cursor: pointer;
+}
+
+/* ================================================
+   Main Content
+   ================================================ */
 main {
-    padding: 20px;
+    padding: 40px 0;
 }
 
 section {
-    margin-bottom: 20px;
+    margin-bottom: 60px;
 }
 
-footer {
-    background-color: #333;
+section h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #212529; /* Darker gray */
+    border-bottom: 3px solid #dee2e6; /* Light gray border */
+    padding-bottom: 15px;
+}
+
+section p {
+    font-size: 1.1em;
+    color: #6c757d; /* Slightly lighter gray */
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #007bff;
     color: #fff;
-    text-align: center;
-    padding: 1em 0;
-    position: fixed; /* optional, to stick footer to the bottom */
-    bottom: 0;         /* adjust, if footer has dynamic height */
-    width: 100%;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
 }
 
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Image Styles */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ================================================
+   E2 Model Details Table
+   ================================================ */
 table {
     border-collapse: collapse;
     width: 100%;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
+th,
+td {
+    border: 1px solid #e9ecef; /* Very light gray border */
+    padding: 15px;
     text-align: left;
 }
 
 th {
-    background-color: #f2f2f2;
+    background-color: #f2f4f6; /* Slightly off-white */
+    font-weight: 600;
+    color: #495057;
 }
+
+tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+/* ================================================
+   Footer
+   ================================================ */
+footer {
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 2em 0;
+    font-size: 0.9em;
+}
+
+/* ================================================
+   Responsive Design
+   ================================================ */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        display: none; /* Hide menu initially */
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff; /* Match header background */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        padding: 10px 0;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+
+    nav li {
+        margin-left: 0;
+        margin-bottom: 0.75em;
+        text-align: center;
+    }
+
+    nav a {
+        display: block;
+        padding: 10px;
+    }
+
+    .menu-toggle {
+        display: block; /* Show the menu button */
+    }
+
+    /* Show menu when 'active' class is added */
+    nav ul.active {
+        display: flex;
+    }
+
+    section h2 {
+        font-size: 2em;
+    }
+}
+
+/* ================================================
+   Specific Page Styles (Example)
+   ================================================ */
+/* You can add page-specific styles here if needed */
