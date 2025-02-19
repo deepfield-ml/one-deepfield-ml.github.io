@@ -1,51 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DeepField ML - Home</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
 
     <header>
-        <h1>DeepField ML</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="e2model.html">DeepField E2 Model</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">DeepField ML</a>
+            </div>
+            <nav>
+                <ul id="main-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="e2model.html">DeepField E2 Model</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section>
-            <h2>DeepField E2: Lightweight Jersey Digit Recognition</h2>
-            <p>Our latest project, DeepField E2, is a lightweight mixture-of-experts engine for jersey digit recognition, achieved through knowledge distillation.  It's designed for resource-constrained environments like edge devices.</p>
+        <div class="container">
+            <section>
+                <h2>DeepField E2: Lightweight Jersey Digit Recognition</h2>
+                <p>Our latest project, DeepField E2, is a lightweight mixture-of-experts engine for jersey digit recognition, achieved through knowledge distillation. It's designed for resource-constrained environments like edge devices.</p>
 
-            <h3>Key Features:</h3>
-            <ul>
-                <li><strong>High Accuracy:</strong> Achieves 94.6% test accuracy.</li>
-                <li><strong>Lightweight:</strong> Only ~16MB in size.</li>
-                <li><strong>Efficient:</strong> Reduces computational overhead by 78% compared to traditional models.</li>
-                <li><strong>Knowledge Distillation:</strong> Leverages knowledge from a ResNet-34 teacher model to an EfficientNet-B0 student architecture.</li>
-            </ul>
+                <h3>Key Features:</h3>
+                <ul>
+                    <li><strong>High Accuracy:</strong> Achieves 94.6% test accuracy.</li>
+                    <li><strong>Lightweight:</strong> Only ~16MB in size.</li>
+                    <li><strong>Efficient:</strong> Reduces computational overhead by 78% compared to traditional models.</li>
+                    <li><strong>Knowledge Distillation:</strong> Leverages knowledge from a ResNet-34 teacher model to an EfficientNet-B0 student architecture.</li>
+                </ul>
 
-            <p><a href="e2model.html">Learn more about the DeepField E2 Model</a></p>
-        </section>
+                <p><a href="e2model.html" class="btn">Learn more about the DeepField E2 Model</a></p>
+            </section>
 
-        <section>
-            <h2>Contact</h2>
-            <p>For inquiries, please contact us at deepfield-ml@outlook.com.</p>
-        </section>
+            <section>
+                <h2>Contact</h2>
+                <p>For inquiries, please contact us at deepfield-ml@outlook.com.</p>
+            </section>
+        </div>
     </main>
 
     <footer>
-        <p>© 2025 DeepField ML</p>
-        <p>Ziqian Huang and Will Chen</p>
+        <div class="container">
+            <p>© 2024 DeepField ML</p>
+        </div>
     </footer>
 
     <script src="js/script.js"></script>
 </body>
+
 </html>
